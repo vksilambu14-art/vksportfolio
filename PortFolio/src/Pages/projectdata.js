@@ -1,5 +1,4 @@
-{
-  "projects": [
+let projects = [
     {
       "id": "1",
       "title": "Student Management System",
@@ -32,6 +31,5 @@
       "github": "https://github.com/vksilambu14-art/React-JS",
       "live": "https://example.com"
     }
-  ],
-  "messages": []
-}
+  ]
+  export default projects;

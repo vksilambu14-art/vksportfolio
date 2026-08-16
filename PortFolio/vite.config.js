@@ -8,6 +8,6 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-   root: './src'
-   
+ 
+
 })
