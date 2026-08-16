@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Student Management System",
+      "description": "A React application for managing student information.",
+      "technology": "React",
+      "github": "https://github.com/vksilambu14-art/React-JS/tree/master/ReactDom",
+      "live": "https://example.com"
+    },
+    {
+      "id": "2",
+      "title": "Employee Management System",
+      "description": "An employee management application with CRUD operations.",
+      "technology": "React + API",
+      "github": "https://github.com/vksilambu14-art/React-JS/tree/master/ReactDom/src/Pages",
+      "live": "https://example.com"
+    },
+    {
+      "id": "3",
+      "title": "E-Commerce Website",
+      "description": "A responsive e-commerce website built using React.",
+      "technology": "React + JavaScript",
+      "github": "https://github.com/vksilambu14-art/React-JS/tree/master/ReactDom/src/ProductPages",
+      "live": "https://example.com"
+    },
+    {
+      "id": "4",
+      "title": "Personal Portfolio Website",
+      "description": "A modern responsive personal portfolio website showcasing my skills, projects, experience and contact information.",
+      "technology": "React + JavaScript + CSS + React Router",
+      "github": "https://github.com/vksilambu14-art/React-JS",
+      "live": "https://example.com"
+    }
+  ],
+  "messages": []
+}
