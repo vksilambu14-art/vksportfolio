@@ -1,14 +1,20 @@
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
   width: 100%;
   height: 70px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--card-color);
+  background: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   transition: 0.3s ease;
 }
 
+/* =========================
+   NAV CONTAINER
+========================= */
 .nav-container {
   width: 100%;
   max-width: 1200px;
@@ -18,8 +24,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 25px;
 }
 
+/* =========================
+   LOGO
+========================= */
 .logo {
   display: flex;
   align-items: center;
@@ -27,20 +37,24 @@
   color: var(--text-color);
   text-decoration: none;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .logo img {
-  width: 45px;
-  height: 45px;
+  width: 42px;
+  height: 42px;
   object-fit: cover;
   border-radius: 50%;
 }
 
+/* =========================
+   NAV LINKS
+========================= */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 28px;
 }
 
 .nav-links a {
@@ -49,7 +63,9 @@
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 18px;
+  font-weight: 500;
   transition: 0.3s ease;
+  position: relative;
 }
 
 .nav-links a:hover {
@@ -57,41 +73,131 @@
   color: var(--primary-color);
 }
 
-.nav-links a.active {
-  background: var(--primary-color);
-  color: white;
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  background: #0284c7;
 }
 
+/* =========================
+   RIGHT ACTIONS
+========================= */
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.theme-button {
-  width: 42px;
-  height: 42px;
+.theme-button,
+.menu-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  background: var(--card-color);
   color: var(--text-color);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
+  border: 1px solid var(--border-color);
+  background: var(--card-color);
+  transition: 0.3s ease;
 }
 
+.theme-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.theme-button:hover {
+  background: var(--bg-color);
+}
+
+/* =========================
+   HAMBURGER
+========================= */
 .menu-button {
   display: none;
   width: 42px;
   height: 42px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--border-color);
   border-radius: 8px;
-  background: var(--card-color);
-  color: var(--text-color);
-  cursor: pointer;
-  font-size: 22px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  /* Hide normal navigation */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show menu button */
+  .menu-button {
+    display: flex;
+  }
+
+  /* Open mobile menu */
+  .nav-links.mobile-open {
+    display: flex;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .nav-links.mobile-open a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .nav-links.mobile-open a.active::after {
+    display: none;
+  }
+
+  .nav-links.mobile-open a.active {
+    background: var(--card-color);
+    border-radius: 6px;
+    color: var(--primary-color);
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-button,
+  .menu-button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 }
