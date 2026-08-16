@@ -7,5 +7,6 @@ import babel from '@rolldown/plugin-babel'
 
 
 export default defineConfig({
-  root: './src', // or wherever your index.html lives
+  root: './src',
+  plugins: [react()] 
 })
